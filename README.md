@@ -122,3 +122,5 @@ curl -X POST http://localhost:3000/api/apps/register \
 curl http://localhost:3000/api/apis/your_app_id/endpoint \
   -H "X-API-Key: your_api_key"
 ```
+## Included a postman collection file in the root of the project that can be imported in postman.
+  Name : rate_limiting_proxy.postman_collection.json

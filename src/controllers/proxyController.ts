@@ -26,7 +26,6 @@ export const proxyRequest = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'App not found' });
     }
 
-    // Check rate limit
     const allowed = await rateLimiter.isAllowed(appId, app.rate_limit, app.time_window);
 
     if (!allowed) {
