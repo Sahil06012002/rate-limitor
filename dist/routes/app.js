@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const appController_1 = require("../controllers/appController");
+const auth_1 = require("../middleware/auth");
+const router = (0, express_1.Router)();
+router.use(auth_1.authenticateApiKey);
+router.post('/register', appController_1.registerApp);
+router.get('/', appController_1.getApps);
+exports.default = router;
